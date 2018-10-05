@@ -1,7 +1,9 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello, world!\n";
+    cout<<"Hello World!!"<<endl;
+    cout<<\t<<"This is Hacktoberfest"<<endl;
     return 0;
 }
