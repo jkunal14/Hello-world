@@ -1,25 +1,26 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-int arm=0,a,b,c,d,no;
-cout << "Enter any number" << endl;
-cin >> no;
-d = no;
-while( no > 0){
-    a=no%10;
-    no=no/10;
-    arm=arm+a*a*a;
-}
-if(arm==d){
-  cout<<"Yes";
-}
-else{
-   cout<<"No";
-
-}
-
-return 0;
+    int num,n,digit,sum=0;
+    cout<<"Enter any positive number "<<endl;
+    cin>>num;
+    n=num;
+    
+    while(num !=0)
+    {
+        digit=num%10;
+        sum+=digit*digit*digit;
+        num/=10;
+    }
+    if(sum==n)
+    {
+        cout<<"The entered by you is an Armstrong Number "<<endl;
+    }
+    else
+    {
+        cout<<"The number entered by you is not an Armstrong Number "<<endl;
+    }
+    return 0;
 }
