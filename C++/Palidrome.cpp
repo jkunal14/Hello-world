@@ -1,23 +1,29 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-    int a,n,b,s=0;
-    cout << "Please enter a number" << endl;
-    cin >> n;
-    b = n;
-    while( n > 0){
-    a = n % 10;
-    n = n / 10;
-    s = s * 10 + a;
+    int a,num,digit,rev=0;
+    cout << "Please enter the number of which you wish to find Palindrome "<<endl;
+    cin >> num;
+    n=num;
+    
+    while(n!=0)
+    {
+        digit=num%10;
+        rev=(rev*10)+digit;
+        num=num/10;
     }
-    if( b == s){
-    cout << "Yes" << endl;
+    cout<<"The reverse of the number you entered is "<<rev<<endl;
+    
+    if(n==rev)
+    {
+        cout<<"The number you entered is a Palindrome "<<endl;
     }
-    else{
-    cout << "No" << endl;
+    else
+    {
+        cout<<"The number you entered is not a Palindrome "<<endl;
     }
     return 0;
 }
+
